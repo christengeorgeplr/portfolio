@@ -122,13 +122,13 @@ export default function Home() {
   ];
 
   return (
-    <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
+    <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-black' : 'bg-white'}`}>
       {/* Theme Toggle Button */}
       <button
         onClick={() => setDarkMode(!darkMode)}
         className={`fixed top-6 right-6 z-50 p-3 rounded-lg border-2 transition-all duration-300 ${
           darkMode
-            ? 'bg-gray-800 border-gray-700 text-yellow-400 hover:bg-gray-700'
+            ? 'bg-black border-gray-700 text-yellow-400 hover:bg-gray-900'
             : 'bg-white border-gray-900 text-gray-900 hover:bg-gray-50'
         } shadow-[4px_4px_0px_0px_rgba(0,0,0,${darkMode ? '0.3' : '1'})] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,${darkMode ? '0.4' : '1'})] hover:-translate-y-1`}
         aria-label="Toggle dark mode"
@@ -211,7 +211,7 @@ export default function Home() {
               href="mailto:christengeorge@tamu.edu"
               className={`px-8 py-3 border-2 rounded-lg font-medium hover:-translate-y-1 transition-all ${
                 darkMode
-                  ? 'bg-gray-800 text-white border-gray-600 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)]'
+                  ? 'bg-black text-white border-gray-600 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)]'
                   : 'bg-white text-gray-900 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]'
               }`}
             >
@@ -221,7 +221,7 @@ export default function Home() {
               href="tel:+19795758579"
               className={`px-8 py-3 border-2 rounded-lg font-medium hover:-translate-y-1 transition-all ${
                 darkMode
-                  ? 'bg-gray-800 text-white border-gray-600 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)]'
+                  ? 'bg-black text-white border-gray-600 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)]'
                   : 'bg-white text-gray-900 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]'
               }`}
             >
@@ -247,7 +247,7 @@ export default function Home() {
             {/* Masters */}
             <div className={`border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 ${
               darkMode
-                ? 'bg-gray-800 border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
+                ? 'bg-black border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
                 : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
             }`}>
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2 mb-4">
@@ -265,7 +265,7 @@ export default function Home() {
                 <p className={`text-sm font-semibold mb-3 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Relevant Coursework:</p>
                 <div className="flex flex-wrap gap-2">
                   {['Power System Transients', 'Power Electronic Systems', 'Rectifier & Inverter Circuits', 'Electric Power System Analysis', 'Sustainable Energy Systems', 'DSP-Based Motion Control', 'Machine Learning', 'Pattern Recognition'].map((course) => (
-                    <span key={course} className={`px-3 py-1.5 rounded-md text-sm border ${darkMode ? 'bg-gray-800 text-gray-300 border-gray-700' : 'bg-gray-100 text-gray-700 border-gray-200'}`}>
+                    <span key={course} className={`px-3 py-1.5 rounded-md text-sm border ${darkMode ? 'bg-black text-gray-300 border-gray-700' : 'bg-gray-100 text-gray-700 border-gray-200'}`}>
                       {course}
                     </span>
                   ))}
@@ -276,7 +276,7 @@ export default function Home() {
             {/* Bachelors */}
             <div className={`border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 ${
               darkMode
-                ? 'bg-gray-800 border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
+                ? 'bg-black border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
                 : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
             }`}>
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2 mb-4">
@@ -294,7 +294,7 @@ export default function Home() {
                 <p className={`text-sm font-semibold mb-3 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Relevant Coursework:</p>
                 <div className="flex flex-wrap gap-2">
                   {['Electrical Machines', 'Power Systems', 'Power Electronics', 'Control Systems', 'Switchgear & Protection', 'Renewable Energy Systems', 'Smart Grid Technology', 'Electric Vehicle Technology'].map((course) => (
-                    <span key={course} className={`px-3 py-1.5 rounded-md text-sm border ${darkMode ? 'bg-gray-800 text-gray-300 border-gray-700' : 'bg-gray-100 text-gray-700 border-gray-200'}`}>
+                    <span key={course} className={`px-3 py-1.5 rounded-md text-sm border ${darkMode ? 'bg-black text-gray-300 border-gray-700' : 'bg-gray-100 text-gray-700 border-gray-200'}`}>
                       {course}
                     </span>
                   ))}
@@ -316,7 +316,7 @@ export default function Home() {
             {Object.entries(skills).map(([category, items]) => (
               <div key={category} className={`border-2 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 ${
                 darkMode
-                  ? 'bg-gray-800 border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
+                  ? 'bg-black border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
                   : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
               }`}>
                 <h3 className={`text-xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>{category}</h3>
@@ -324,7 +324,7 @@ export default function Home() {
                   {items.map((skill) => (
                     <span
                       key={skill}
-                      className={`px-3 py-1.5 rounded-md text-sm ${darkMode ? 'bg-gray-800 text-gray-300' : 'bg-gray-100 text-gray-700'}`}
+                      className={`px-3 py-1.5 rounded-md text-sm ${darkMode ? 'bg-black text-gray-300' : 'bg-gray-100 text-gray-700'}`}
                     >
                       {skill}
                     </span>
@@ -359,7 +359,7 @@ export default function Home() {
                 onMouseLeave={() => setHoveredProject(null)}
                 className={`group relative rounded-xl p-8 transition-all duration-300 hover:-translate-y-2 block border overflow-hidden ${
                   darkMode
-                    ? 'bg-gray-800 border-gray-700 hover:border-gray-500 shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,0.15)]'
+                    ? 'bg-black border-gray-700 hover:border-gray-500 shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,0.15)]'
                     : 'bg-white border-gray-200 hover:border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.15)]'
                 }`}
                 style={{ cursor: 'none' }}
@@ -419,7 +419,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className={`block border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 group ${
                 darkMode
-                  ? 'bg-gray-800 border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
+                  ? 'bg-black border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
                   : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
               }`}
             >
@@ -442,7 +442,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className={`block border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 group ${
                 darkMode
-                  ? 'bg-gray-800 border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
+                  ? 'bg-black border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
                   : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
               }`}
             >

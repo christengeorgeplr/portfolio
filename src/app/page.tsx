@@ -195,7 +195,11 @@ export default function Home() {
           </h2>
           <div className="space-y-10">
             {/* Masters */}
-            <div className={`border-l-4 pl-8 ${darkMode ? 'border-white' : 'border-gray-900'}`}>
+            <div className={`border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 ${
+              darkMode
+                ? 'bg-gray-800 border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
+                : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
+            }`}>
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2 mb-4">
                 <div>
                   <h3 className={`text-2xl font-bold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Master of Science in Electrical Engineering</h3>
@@ -220,7 +224,11 @@ export default function Home() {
             </div>
 
             {/* Bachelors */}
-            <div className={`border-l-4 pl-8 ${darkMode ? 'border-gray-600' : 'border-gray-300'}`}>
+            <div className={`border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 ${
+              darkMode
+                ? 'bg-gray-800 border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
+                : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
+            }`}>
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2 mb-4">
                 <div>
                   <h3 className={`text-2xl font-bold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Bachelor of Technology in Electrical and Electronics Engineering</h3>
@@ -256,7 +264,11 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {Object.entries(skills).map(([category, items]) => (
-              <div key={category} className={`border-l-4 pl-6 ${darkMode ? 'border-white' : 'border-gray-900'}`}>
+              <div key={category} className={`border-2 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 ${
+                darkMode
+                  ? 'bg-gray-800 border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
+                  : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
+              }`}>
                 <h3 className={`text-xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>{category}</h3>
                 <div className="flex flex-wrap gap-2">
                   {items.map((skill) => (
@@ -355,7 +367,11 @@ export default function Home() {
               href="https://drive.google.com/file/d/1YXr2pfkK6zgzQJihle4pbP5fv4UL1T96/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className={`block border-l-4 pl-8 transition-all py-4 -ml-1 group ${darkMode ? 'border-white hover:bg-gray-800' : 'border-gray-900 hover:bg-gray-50'}`}
+              className={`block border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 group ${
+                darkMode
+                  ? 'bg-gray-800 border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
+                  : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
+              }`}
             >
               <div className="flex items-start justify-between">
                 <div>
@@ -374,7 +390,11 @@ export default function Home() {
               href="https://drive.google.com/file/d/1sO2boOdIR0GQOETfImNEZu5GTF_KXCcg/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className={`block border-l-4 pl-8 transition-all py-4 -ml-1 group ${darkMode ? 'border-gray-600 hover:bg-gray-800' : 'border-gray-300 hover:bg-gray-50'}`}
+              className={`block border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 group ${
+                darkMode
+                  ? 'bg-gray-800 border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
+                  : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
+              }`}
             >
               <div className="flex items-start justify-between">
                 <div>

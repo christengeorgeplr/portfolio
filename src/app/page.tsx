@@ -11,57 +11,49 @@ export default function Home() {
       title: 'Hybrid Solar–Wind Energy System for Grid Optimization',
       description: 'Developed hybrid renewable energy model integrating 28.8 kW solar PV array with Perturb & Observe MPPT and 3.6 kW PMSG wind turbine. Maintained DC-bus voltage at 700±20V with ±3% power accuracy.',
       tags: ['MATLAB/Simulink', 'MPPT', 'Grid Integration', 'Simscape'],
-      period: 'Jan 2025 – May 2025',
-      icon: '⚡'
+      period: 'Jan 2025 – May 2025'
     },
     {
       title: '500 kV PV-Integrated Lightning Surge Study',
       description: 'Performed high-voltage transient analysis on transmission grid with WECC_PVP_1 inverter. Reduced peak overvoltage from 6 MV to <800 kV, improving insulation margin by 20%.',
       tags: ['EMTP', 'ATPDraw', 'Protection', 'High Voltage'],
-      period: 'Aug 2024 – Dec 2024',
-      icon: '⚡'
+      period: 'Aug 2024 – Dec 2024'
     },
     {
       title: 'Multi-Converter System Analysis',
       description: 'Analyzed four-converter DC-bus system using Conversion Function Theory (CFT). Reduced computation time by >85% while maintaining identical transient response and voltage ripple ≈1%.',
       tags: ['MATLAB', 'Control Systems', 'CFT', 'Simulink'],
-      period: 'Jan 2024 – May 2024',
-      icon: '🔧'
+      period: 'Jan 2024 – May 2024'
     },
     {
       title: 'UPS: PFC Rectifier + Bidirectional DC–DC Converter',
       description: 'Designed front-end converter for uninterruptible power supply with PFC rectifier and bidirectional buck/boost converter. Verified efficiency and voltage regulation.',
       tags: ['LTspice', 'Power Electronics', 'MATLAB'],
-      period: 'Aug 2023 – Dec 2023',
-      icon: '🔋'
+      period: 'Aug 2023 – Dec 2023'
     },
     {
       title: 'Solar Twin – AI Digital Twin Model',
       description: 'Built ML-based forecasting and anomaly-detection models for solar plants using TensorFlow and XGBoost. Implemented predictive analytics for performance optimization.',
       tags: ['Python', 'TensorFlow', 'XGBoost', 'ML'],
-      period: '2023',
-      icon: '🤖'
+      period: '2023'
     },
     {
       title: 'Solar-Based Floor Cleaning Machine',
       description: 'Designed semi-automatic solar-powered cleaning robot with Bluetooth wireless control, ultrasonic obstacle detection, and multi-motor drive system.',
       tags: ['Arduino', 'ATmega328', 'IoT', 'Robotics'],
-      period: '2022',
-      icon: '🤖'
+      period: '2022'
     },
     {
       title: 'Closed-Loop Control for BLDC Motors',
       description: 'Implemented PWM generation, ADC sampling, and PI speed control using TI Delfino DSP (F28379D) in Code Composer Studio for brushed and BLDC motors.',
       tags: ['DSP', 'Code Composer', 'Motor Control'],
-      period: '2022',
-      icon: '⚙️'
+      period: '2022'
     },
     {
       title: 'Human-Following Robot',
       description: 'Developed IR and ultrasonic sensor-based autonomous motion control system using Arduino. Implemented real-time object tracking and following algorithms.',
       tags: ['Arduino', 'Sensors', 'Robotics'],
-      period: '2021',
-      icon: '🤖'
+      period: '2021'
     }
   ];
 
@@ -105,19 +97,19 @@ export default function Home() {
               href="https://www.linkedin.com/in/christen-george"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-all"
+              className="px-8 py-3 bg-gray-900 text-white rounded-lg font-medium hover:-translate-y-1 transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
             >
               LinkedIn
             </a>
             <a
               href="mailto:christengeorge@tamu.edu"
-              className="px-8 py-3 bg-white text-gray-900 border-2 border-gray-900 rounded-lg font-medium hover:bg-gray-50 transition-all"
+              className="px-8 py-3 bg-white text-gray-900 border-2 border-gray-900 rounded-lg font-medium hover:-translate-y-1 transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
             >
               Email
             </a>
             <a
               href="tel:+19795758579"
-              className="px-8 py-3 bg-white text-gray-900 border-2 border-gray-300 rounded-lg font-medium hover:border-gray-900 transition-all"
+              className="px-8 py-3 bg-white text-gray-900 border-2 border-gray-900 rounded-lg font-medium hover:-translate-y-1 transition-all shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]"
             >
               +1 (979) 575-8579
             </a>
@@ -224,11 +216,10 @@ export default function Home() {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="group border border-gray-200 rounded-lg p-8 hover:border-gray-900 hover:shadow-xl transition-all duration-300"
+                className="group relative bg-white border border-gray-200 rounded-xl p-8 hover:border-gray-900 transition-all duration-300 hover:-translate-y-2 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.15)]"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className="text-4xl">{project.icon}</div>
-                  <span className="text-sm text-gray-500 bg-gray-100 px-3 py-1 rounded-md">{project.period}</span>
+                  <span className="text-sm font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-md">{project.period}</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>

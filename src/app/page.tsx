@@ -11,49 +11,64 @@ export default function Home() {
       title: 'Hybrid Solar–Wind Energy System for Grid Optimization',
       description: 'Developed hybrid renewable energy model integrating 28.8 kW solar PV array with Perturb & Observe MPPT and 3.6 kW PMSG wind turbine. Maintained DC-bus voltage at 700±20V with ±3% power accuracy.',
       tags: ['MATLAB/Simulink', 'MPPT', 'Grid Integration', 'Simscape'],
-      period: 'Jan 2025 – May 2025'
+      period: 'Jan 2025 – May 2025',
+      link: 'https://drive.google.com/file/d/1ePwNvMm6jjAcWexa1N7CgnsFl4c2M3a9/view?usp=sharing'
     },
     {
       title: '500 kV PV-Integrated Lightning Surge Study',
       description: 'Performed high-voltage transient analysis on transmission grid with WECC_PVP_1 inverter. Reduced peak overvoltage from 6 MV to <800 kV, improving insulation margin by 20%.',
       tags: ['EMTP', 'ATPDraw', 'Protection', 'High Voltage'],
-      period: 'Aug 2024 – Dec 2024'
+      period: 'Aug 2024 – Dec 2024',
+      link: 'https://drive.google.com/file/d/19GxGJfXoWSjJ3bEpLPo9bAPM3IuqZ6WU/view?usp=sharing'
     },
     {
       title: 'Multi-Converter System Analysis',
       description: 'Analyzed four-converter DC-bus system using Conversion Function Theory (CFT). Reduced computation time by >85% while maintaining identical transient response and voltage ripple ≈1%.',
       tags: ['MATLAB', 'Control Systems', 'CFT', 'Simulink'],
-      period: 'Jan 2024 – May 2024'
+      period: 'Jan 2024 – May 2024',
+      link: 'https://drive.google.com/file/d/1SMuhlAnqAHMSfKUvbyEyL3dUnnMuIn_6/view?usp=sharing'
     },
     {
       title: 'UPS: PFC Rectifier + Bidirectional DC–DC Converter',
       description: 'Designed front-end converter for uninterruptible power supply with PFC rectifier and bidirectional buck/boost converter. Verified efficiency and voltage regulation.',
       tags: ['LTspice', 'Power Electronics', 'MATLAB'],
-      period: 'Aug 2023 – Dec 2023'
+      period: 'Aug 2023 – Dec 2023',
+      link: 'https://drive.google.com/file/d/1K_pz5XUOLMyvaLfxoYUCfI3CtMHZN4Hi/view?usp=sharing'
     },
     {
       title: 'Solar Twin – AI Digital Twin Model',
       description: 'Built ML-based forecasting and anomaly-detection models for solar plants using TensorFlow and XGBoost. Implemented predictive analytics for performance optimization.',
       tags: ['Python', 'TensorFlow', 'XGBoost', 'ML'],
-      period: '2023'
+      period: '2023',
+      link: 'https://drive.google.com/file/d/1qAYZIOJh4SXRzgU32zsMbN7oaaw2SIWA/view?usp=sharing'
     },
     {
       title: 'Solar-Based Floor Cleaning Machine',
       description: 'Designed semi-automatic solar-powered cleaning robot with Bluetooth wireless control, ultrasonic obstacle detection, and multi-motor drive system.',
       tags: ['Arduino', 'ATmega328', 'IoT', 'Robotics'],
-      period: '2022'
+      period: '2022',
+      link: 'https://drive.google.com/file/d/17VJkauPeLaSkXAN4ORlHGKX6kzMYkcts/view?usp=sharing'
     },
     {
-      title: 'Closed-Loop Control for BLDC Motors',
-      description: 'Implemented PWM generation, ADC sampling, and PI speed control using TI Delfino DSP (F28379D) in Code Composer Studio for brushed and BLDC motors.',
-      tags: ['DSP', 'Code Composer', 'Motor Control'],
-      period: '2022'
+      title: 'Closed Loop Control for Brushed and Brushless DC Motor using TI Delfino F28379D',
+      description: 'Analysed open-loop and closed-loop transfer functions of a DC motor and plotted step responses. Executed and troubleshooted closed-loop speed control on an 8-pole BLDC motor using a PI controller and Hall sensors.',
+      tags: ['Code Composer Studio', 'C/C++', 'Delfino C2000', 'TMS320F28379D'],
+      period: 'Oct 2024 – Dec 2024',
+      link: 'https://drive.google.com/drive/folders/1Ic2mqRDxfGAHXJ-Iox7s6XuZWUch40e1?usp=sharing'
+    },
+    {
+      title: 'Underground Cable Fault Detection using Arduino',
+      description: 'Designed and implemented a microcontroller-based system to identify and locate open- and short-circuit faults in underground cables using Ohm\'s law principles. Built test setup with Arduino UNO, 16×2 LCD, and resistor network (0.01 Ω/m) to detect fault distance up to 2m. Achieved fault-location accuracy within ±5cm with integrated buzzer alarm and on-screen distance display.',
+      tags: ['Arduino IDE', 'ATmega328', 'LCD', 'Embedded Systems'],
+      period: 'Sept 2022 – Dec 2022',
+      link: 'https://drive.google.com/file/d/1Y8ooTt7QaQtcaBZewQaN2_TuIRRxgp5-/view?usp=sharing'
     },
     {
       title: 'Human-Following Robot',
       description: 'Developed IR and ultrasonic sensor-based autonomous motion control system using Arduino. Implemented real-time object tracking and following algorithms.',
-      tags: ['Arduino', 'Sensors', 'Robotics'],
-      period: '2021'
+      tags: ['Arduino', 'Sensors', 'Robotics', 'Embedded'],
+      period: '2021',
+      link: 'https://drive.google.com/file/d/1pPANnVEQp04vGc1LApGOMTI-qL8ttYQe/view?usp=sharing'
     }
   ];
 
@@ -214,14 +229,18 @@ export default function Home() {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <div
+              <a
                 key={index}
-                className="group relative bg-white border border-gray-200 rounded-xl p-8 hover:border-gray-900 transition-all duration-300 hover:-translate-y-2 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.15)]"
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative bg-white border border-gray-200 rounded-xl p-8 hover:border-gray-900 transition-all duration-300 hover:-translate-y-2 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.15)] cursor-pointer block"
               >
                 <div className="flex items-start justify-between mb-4">
                   <span className="text-sm font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-md">{project.period}</span>
+                  <span className="text-gray-400 group-hover:text-gray-900 transition-colors">→</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:underline">{project.title}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
@@ -233,7 +252,7 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </section>
@@ -247,23 +266,43 @@ export default function Home() {
             Experience
           </h2>
           <div className="space-y-10">
-            <div className="border-l-4 border-gray-900 pl-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Engineering Intern</h3>
-              <p className="text-xl text-gray-700 mb-1">Youngminds Technology Solutions</p>
-              <p className="text-sm text-gray-500 mb-4">Dec 2022 – Jan 2023 • India</p>
-              <p className="text-gray-600 leading-relaxed">
-                Developed wind turbine emulator model using DC motors and MATLAB/Simulink. Implemented control systems for generator performance analysis under variable wind conditions. Configured DC drive and load control hardware for accurate real-time turbine emulation.
-              </p>
-            </div>
+            <a
+              href="https://drive.google.com/file/d/1YXr2pfkK6zgzQJihle4pbP5fv4UL1T96/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block border-l-4 border-gray-900 pl-8 hover:bg-gray-50 transition-all py-4 -ml-1 group"
+            >
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:underline">Engineering Intern</h3>
+                  <p className="text-xl text-gray-700 mb-1">Youngminds Technology Solutions</p>
+                  <p className="text-sm text-gray-500 mb-4">Dec 2022 – Jan 2023 • India</p>
+                  <p className="text-gray-600 leading-relaxed">
+                    Developed wind turbine emulator model using DC motors and MATLAB/Simulink. Implemented control systems for generator performance analysis under variable wind conditions. Configured DC drive and load control hardware for accurate real-time turbine emulation.
+                  </p>
+                </div>
+                <span className="text-gray-400 group-hover:text-gray-900 transition-colors">→</span>
+              </div>
+            </a>
 
-            <div className="border-l-4 border-gray-300 pl-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Electrical Engineering Intern</h3>
-              <p className="text-xl text-gray-700 mb-1">J.R. Electricals</p>
-              <p className="text-sm text-gray-500 mb-4">May 2021 – Jul 2021 • India</p>
-              <p className="text-gray-600 leading-relaxed">
-                Gained hands-on experience with 400/220 kV GIS substations, protection schemes, and SCADA systems. Studied IEC standards for grounding and lightning protection. Assisted in equipment inspection and documentation of HT/LT installation processes.
-              </p>
-            </div>
+            <a
+              href="https://drive.google.com/file/d/1sO2boOdIR0GQOETfImNEZu5GTF_KXCcg/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block border-l-4 border-gray-300 pl-8 hover:bg-gray-50 transition-all py-4 -ml-1 group"
+            >
+              <div className="flex items-start justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:underline">Electrical Engineering Intern</h3>
+                  <p className="text-xl text-gray-700 mb-1">J.R. Electricals</p>
+                  <p className="text-sm text-gray-500 mb-4">May 2021 – Jul 2021 • India</p>
+                  <p className="text-gray-600 leading-relaxed">
+                    Gained hands-on experience with 400/220 kV GIS substations, protection schemes, and SCADA systems. Studied IEC standards for grounding and lightning protection. Assisted in equipment inspection and documentation of HT/LT installation processes.
+                  </p>
+                </div>
+                <span className="text-gray-400 group-hover:text-gray-900 transition-colors">→</span>
+              </div>
+            </a>
           </div>
         </section>
 

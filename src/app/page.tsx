@@ -119,7 +119,23 @@ export default function Home() {
       <div className="max-w-6xl mx-auto px-6 py-16">
         {/* Hero Section */}
         <header className="mb-24 pt-12">
-          <h1 className={`text-7xl font-bold mb-6 tracking-tight ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+          {/* 3D Hi Section */}
+          <div className="mb-8">
+            <h2 className={`text-5xl font-bold mb-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+              Hi, I am
+            </h2>
+          </div>
+
+          <h1 className={`text-7xl font-bold mb-6 tracking-tight ${
+            darkMode
+              ? 'text-white'
+              : 'text-gray-900'
+          }`}
+          style={{
+            textShadow: darkMode
+              ? '4px 4px 0px rgba(255,255,255,0.1)'
+              : '4px 4px 0px rgba(0,0,0,0.1)'
+          }}>
             Christen George
           </h1>
 
@@ -190,9 +206,14 @@ export default function Home() {
 
         {/* Education Section */}
         <section className="mb-24">
-          <h2 className={`text-4xl font-bold mb-12 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-            Education
-          </h2>
+          <div className="flex items-center gap-4 mb-12">
+            <svg className={`w-10 h-10 ${darkMode ? 'text-white' : 'text-gray-900'}`} fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+            </svg>
+            <h2 className={`text-4xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+              Education
+            </h2>
+          </div>
           <div className="space-y-10">
             {/* Masters */}
             <div className={`border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 ${

@@ -196,7 +196,7 @@ export default function Home() {
 
           <div className="flex flex-wrap gap-4">
             <a
-              href="https://www.linkedin.com/in/christen-george"
+              href="https://www.linkedin.com/in/mrchristengeorge/"
               target="_blank"
               rel="noopener noreferrer"
               className={`px-8 py-3 rounded-lg font-medium hover:-translate-y-1 transition-all ${

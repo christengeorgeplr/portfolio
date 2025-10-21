@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
+  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
 
   useEffect(() => {
     // Check for saved theme preference or default to light mode
@@ -286,13 +288,39 @@ export default function Home() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Click to view project"
-                className={`group relative rounded-xl p-8 transition-all duration-300 hover:-translate-y-2 cursor-pointer block border ${
+                onMouseMove={(e) => {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  setCursorPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+                  setHoveredProject(index);
+                }}
+                onMouseEnter={() => setHoveredProject(index)}
+                onMouseLeave={() => setHoveredProject(null)}
+                className={`group relative rounded-xl p-8 transition-all duration-300 hover:-translate-y-2 block border overflow-hidden ${
                   darkMode
                     ? 'bg-gray-800 border-gray-700 hover:border-gray-500 shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,0.15)]'
                     : 'bg-white border-gray-200 hover:border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.15)]'
                 }`}
+                style={{ cursor: 'none' }}
               >
+                {/* Custom Cursor Follower */}
+                {hoveredProject === index && (
+                  <div
+                    className={`absolute pointer-events-none z-10 px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap flex items-center gap-1.5 ${
+                      darkMode ? 'bg-white text-gray-900 shadow-lg' : 'bg-gray-900 text-white shadow-lg'
+                    }`}
+                    style={{
+                      left: `${cursorPos.x + 15}px`,
+                      top: `${cursorPos.y + 15}px`,
+                      transform: 'translate(0, 0)'
+                    }}
+                  >
+                    <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z" clipRule="evenodd" />
+                    </svg>
+                    Click to view
+                  </div>
+                )}
+
                 <div className="flex items-start justify-between mb-4">
                   <span className={`text-sm font-semibold px-3 py-1 rounded-md ${darkMode ? 'text-gray-400 bg-gray-700' : 'text-gray-500 bg-gray-100'}`}>{project.period}</span>
                   <span className={`transition-colors ${darkMode ? 'text-gray-500 group-hover:text-white' : 'text-gray-400 group-hover:text-gray-900'}`}>→</span>

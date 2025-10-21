@@ -6,6 +6,7 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const [typedText, setTypedText] = useState('');
 
   useEffect(() => {
     // Check for saved theme preference or default to light mode
@@ -19,6 +20,33 @@ export default function Home() {
     // Update localStorage when theme changes
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
+
+  // Typing animation effect with loop
+  useEffect(() => {
+    const fullText = 'Hi, I am...';
+    let currentIndex = 0;
+    let isDeleting = false;
+
+    const typingInterval = setInterval(() => {
+      if (!isDeleting && currentIndex <= fullText.length) {
+        setTypedText(fullText.slice(0, currentIndex));
+        currentIndex++;
+      } else if (!isDeleting && currentIndex > fullText.length) {
+        // Wait at full text before starting to delete
+        setTimeout(() => {
+          isDeleting = true;
+        }, 2000);
+      } else if (isDeleting && currentIndex > 0) {
+        currentIndex--;
+        setTypedText(fullText.slice(0, currentIndex));
+      } else if (isDeleting && currentIndex === 0) {
+        // Reset to start typing again
+        isDeleting = false;
+      }
+    }, isDeleting ? 50 : 100); // Faster when deleting
+
+    return () => clearInterval(typingInterval);
+  }, []);
 
   const skills = {
     'Power & Energy': ['Power System Transients', 'Grid Integration', 'Renewable Energy', 'Protection & Surge Analysis'],
@@ -119,10 +147,11 @@ export default function Home() {
       <div className="max-w-6xl mx-auto px-6 py-16">
         {/* Hero Section */}
         <header className="mb-24 pt-12">
-          {/* 3D Hi Section */}
+          {/* 3D Hi Section with Typing Animation */}
           <div className="mb-8">
             <h2 className={`text-5xl font-bold mb-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              Hi, I am
+              {typedText}
+              <span className={`inline-block w-1 h-12 ml-1 animate-pulse ${darkMode ? 'bg-gray-400' : 'bg-gray-600'}`}></span>
             </h2>
           </div>
 

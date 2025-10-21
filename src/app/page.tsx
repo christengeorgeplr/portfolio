@@ -67,6 +67,64 @@ export default function Home() {
           </div>
         </header>
 
+        {/* Education Section */}
+        <section className="mb-24">
+          <h2 className="text-4xl font-bold text-white mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Education
+          </h2>
+          <div className="space-y-6">
+            {/* Masters */}
+            <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-md rounded-xl p-8 border border-white/10 hover:border-blue-500/50 transition-all">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Master of Science in Electrical Engineering</h3>
+                  <p className="text-xl text-blue-300 mb-2">Texas A&M University</p>
+                  <p className="text-gray-400">College Station, TX</p>
+                </div>
+                <div className="mt-4 md:mt-0 text-left md:text-right">
+                  <p className="text-lg font-semibold text-purple-300">Expected: May 2026</p>
+                  <p className="text-blue-200">GPA: 3.5/4.0</p>
+                </div>
+              </div>
+              <div className="mt-4">
+                <p className="text-sm font-semibold text-blue-300 mb-2">Relevant Coursework:</p>
+                <div className="flex flex-wrap gap-2">
+                  {['Power System Transients', 'Power Electronic Systems', 'Rectifier & Inverter Circuits', 'Electric Power System Analysis', 'Sustainable Energy Systems', 'DSP-Based Motion Control', 'Machine Learning', 'Pattern Recognition'].map((course) => (
+                    <span key={course} className="text-xs bg-blue-500/20 text-blue-200 px-3 py-1 rounded-full border border-blue-400/30">
+                      {course}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Bachelors */}
+            <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-md rounded-xl p-8 border border-white/10 hover:border-blue-500/50 transition-all">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-2">Bachelor of Technology in Electrical and Electronics Engineering</h3>
+                  <p className="text-xl text-blue-300 mb-2">Karunya Institute of Technology and Sciences</p>
+                  <p className="text-gray-400">Coimbatore, India</p>
+                </div>
+                <div className="mt-4 md:mt-0 text-left md:text-right">
+                  <p className="text-lg font-semibold text-purple-300">Graduated: May 2023</p>
+                  <p className="text-blue-200">CGPA: 6.2/10</p>
+                </div>
+              </div>
+              <div className="mt-4">
+                <p className="text-sm font-semibold text-blue-300 mb-2">Relevant Coursework:</p>
+                <div className="flex flex-wrap gap-2">
+                  {['Electrical Machines', 'Power Systems', 'Power Electronics', 'Control Systems', 'Switchgear & Protection', 'Renewable Energy Systems', 'Smart Grid Technology', 'Electric Vehicle Technology'].map((course) => (
+                    <span key={course} className="text-xs bg-blue-500/20 text-blue-200 px-3 py-1 rounded-full border border-blue-400/30">
+                      {course}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Technical Skills Section */}
         <section className="mb-24">
           <h2 className="text-4xl font-bold text-white mb-12 text-center bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">

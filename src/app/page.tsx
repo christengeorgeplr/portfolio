@@ -331,30 +331,30 @@ export default function Home() {
               href="https://www.linkedin.com/in/mrchristengeorge/"
               target="_blank"
               rel="noopener noreferrer"
-              className={`px-8 py-3 rounded-lg font-medium hover:-translate-y-1 transition-all ${
+              className={`px-8 py-3 rounded-lg font-medium hover:-translate-y-2 transition-all ${
                 darkMode
-                  ? 'bg-white text-gray-900 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.4)]'
-                  : 'bg-gray-900 text-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]'
+                  ? 'bg-white text-gray-900 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,0.5),0_0_25px_rgba(255,255,255,0.3)]'
+                  : 'bg-gray-900 text-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1),0_0_25px_rgba(0,0,0,0.4)]'
               }`}
             >
               LinkedIn
             </a>
             <a
               href="mailto:christengeorge@tamu.edu"
-              className={`px-8 py-3 border-2 rounded-lg font-medium hover:-translate-y-1 transition-all ${
+              className={`px-8 py-3 border-2 rounded-lg font-medium hover:-translate-y-2 transition-all ${
                 darkMode
-                  ? 'bg-black text-white border-gray-600 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)]'
-                  : 'bg-white text-gray-900 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]'
+                  ? 'bg-black text-white border-gray-600 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.2)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,0.4),0_0_25px_rgba(255,255,255,0.3)]'
+                  : 'bg-white text-gray-900 border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1),0_0_25px_rgba(0,0,0,0.4)]'
               }`}
             >
               Email
             </a>
             <a
               href="tel:+19795758579"
-              className={`px-8 py-3 border-2 rounded-lg font-medium hover:-translate-y-1 transition-all ${
+              className={`px-8 py-3 border-2 rounded-lg font-medium hover:-translate-y-2 transition-all ${
                 darkMode
-                  ? 'bg-black text-white border-gray-600 shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)] hover:shadow-[6px_6px_0px_0px_rgba(255,255,255,0.3)]'
-                  : 'bg-white text-gray-900 border-gray-900 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]'
+                  ? 'bg-black text-white border-gray-600 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.2)] hover:shadow-[10px_10px_0px_0px_rgba(255,255,255,0.4),0_0_25px_rgba(255,255,255,0.3)]'
+                  : 'bg-white text-gray-900 border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1),0_0_25px_rgba(0,0,0,0.4)]'
               }`}
             >
               +1 (979) 575-8579
@@ -377,10 +377,10 @@ export default function Home() {
           </div>
           <div className="space-y-10">
             {/* Masters */}
-            <div className={`border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 ${
+            <div className={`border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-3 ${
               darkMode
-                ? 'bg-black border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
-                : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
+                ? 'bg-black border-gray-700 shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,0.3),0_0_30px_rgba(255,255,255,0.2)]'
+                : 'bg-white border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1),0_0_30px_rgba(0,0,0,0.3)]'
             }`}>
               <div className="mb-4">
                 <h3 className={`text-2xl font-bold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Master of Science in Electrical Engineering</h3>
@@ -405,10 +405,10 @@ export default function Home() {
             </div>
 
             {/* Bachelors */}
-            <div className={`border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 ${
+            <div className={`border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-3 ${
               darkMode
-                ? 'bg-black border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
-                : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
+                ? 'bg-black border-gray-700 shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,0.3),0_0_30px_rgba(255,255,255,0.2)]'
+                : 'bg-white border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1),0_0_30px_rgba(0,0,0,0.3)]'
             }`}>
               <div className="mb-4">
                 <h3 className={`text-2xl font-bold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Bachelor of Technology in Electrical and Electronics Engineering</h3>
@@ -447,10 +447,10 @@ export default function Home() {
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             {Object.entries(skills).map(([category, {description, tags}]) => (
-              <div key={category} className={`border-2 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 ${
+              <div key={category} className={`border-2 rounded-xl p-6 transition-all duration-300 hover:-translate-y-3 ${
                 darkMode
-                  ? 'bg-black border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
-                  : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
+                  ? 'bg-black border-gray-700 shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,0.3),0_0_30px_rgba(255,255,255,0.2)]'
+                  : 'bg-white border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1),0_0_30px_rgba(0,0,0,0.3)]'
               }`}>
                 <h3 className={`text-xl font-bold mb-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}>{category}</h3>
                 <p className={`text-sm mb-4 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{description}</p>
@@ -481,10 +481,10 @@ export default function Home() {
                 }}
                 onMouseEnter={() => setHoveredProject(index)}
                 onMouseLeave={() => setHoveredProject(null)}
-                className={`group relative rounded-xl p-8 transition-all duration-300 hover:-translate-y-2 block border overflow-hidden ${
+                className={`group relative rounded-xl p-8 transition-all duration-300 hover:-translate-y-4 block border overflow-hidden ${
                   darkMode
-                    ? 'bg-black border-gray-700 hover:border-gray-500 shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,0.15)]'
-                    : 'bg-white border-gray-200 hover:border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,0.15)]'
+                    ? 'bg-black border-gray-700 hover:border-gray-500 shadow-[10px_10px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[16px_16px_0px_0px_rgba(255,255,255,0.3),0_0_40px_rgba(255,255,255,0.25)]'
+                    : 'bg-white border-gray-200 hover:border-gray-900 shadow-[10px_10px_0px_0px_rgba(0,0,0,0.1)] hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,0.3),0_0_40px_rgba(0,0,0,0.4)]'
                 }`}
                 style={{ cursor: 'none' }}
               >
@@ -541,10 +541,10 @@ export default function Home() {
               href="https://drive.google.com/file/d/1YXr2pfkK6zgzQJihle4pbP5fv4UL1T96/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className={`block border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 group ${
+              className={`block border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-3 group ${
                 darkMode
-                  ? 'bg-black border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
-                  : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
+                  ? 'bg-black border-gray-700 shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,0.3),0_0_30px_rgba(255,255,255,0.2)]'
+                  : 'bg-white border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1),0_0_30px_rgba(0,0,0,0.3)]'
               }`}
             >
               <div className="flex items-start justify-between">
@@ -564,10 +564,10 @@ export default function Home() {
               href="https://drive.google.com/file/d/1sO2boOdIR0GQOETfImNEZu5GTF_KXCcg/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className={`block border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-1 group ${
+              className={`block border-2 rounded-xl p-8 transition-all duration-300 hover:-translate-y-3 group ${
                 darkMode
-                  ? 'bg-black border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
-                  : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
+                  ? 'bg-black border-gray-700 shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,0.3),0_0_30px_rgba(255,255,255,0.2)]'
+                  : 'bg-white border-gray-900 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1),0_0_30px_rgba(0,0,0,0.3)]'
               }`}
             >
               <div className="flex items-start justify-between">

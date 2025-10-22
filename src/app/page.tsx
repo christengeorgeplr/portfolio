@@ -23,7 +23,7 @@ export default function Home() {
 
   // Typing animation effect with loop
   useEffect(() => {
-    const fullText = 'Hi, I am...';
+    const fullText = 'Hello there...';
     let currentIndex = 0;
     let isDeleting = false;
 
@@ -60,63 +60,63 @@ export default function Home() {
       title: 'Hybrid Solar–Wind Energy System for Grid Optimization',
       description: 'Developed hybrid renewable energy model integrating 28.8 kW solar PV array with Perturb & Observe MPPT and 3.6 kW PMSG wind turbine. Maintained DC-bus voltage at 700±20V with ±3% power accuracy.',
       tags: ['MATLAB/Simulink', 'MPPT', 'Grid Integration', 'Simscape'],
-      period: 'Jan 2025 – May 2025',
+      period: '2025',
       link: 'https://drive.google.com/file/d/1ePwNvMm6jjAcWexa1N7CgnsFl4c2M3a9/view?usp=sharing'
     },
     {
       title: '500 kV PV-Integrated Lightning Surge Study',
       description: 'Performed high-voltage transient analysis on transmission grid with WECC_PVP_1 inverter. Reduced peak overvoltage from 6 MV to <800 kV, improving insulation margin by 20%.',
       tags: ['EMTP', 'ATPDraw', 'Protection', 'High Voltage'],
-      period: 'Aug 2024 – Dec 2024',
+      period: '2025',
       link: 'https://drive.google.com/file/d/19GxGJfXoWSjJ3bEpLPo9bAPM3IuqZ6WU/view?usp=sharing'
     },
     {
       title: 'Multi-Converter System Analysis',
       description: 'Analyzed four-converter DC-bus system using Conversion Function Theory (CFT). Reduced computation time by >85% while maintaining identical transient response and voltage ripple ≈1%.',
       tags: ['MATLAB', 'Control Systems', 'CFT', 'Simulink'],
-      period: 'Jan 2024 – May 2024',
+      period: '2024',
       link: 'https://drive.google.com/file/d/1SMuhlAnqAHMSfKUvbyEyL3dUnnMuIn_6/view?usp=sharing'
     },
     {
       title: 'UPS: PFC Rectifier + Bidirectional DC–DC Converter',
       description: 'Designed front-end converter for uninterruptible power supply with PFC rectifier and bidirectional buck/boost converter. Verified efficiency and voltage regulation.',
       tags: ['LTspice', 'Power Electronics', 'MATLAB'],
-      period: 'Aug 2023 – Dec 2023',
+      period: '2024',
       link: 'https://drive.google.com/file/d/1K_pz5XUOLMyvaLfxoYUCfI3CtMHZN4Hi/view?usp=sharing'
     },
     {
       title: 'Solar Twin – AI Digital Twin Model',
       description: 'Built ML-based forecasting and anomaly-detection models for solar plants using TensorFlow and XGBoost. Implemented predictive analytics for performance optimization.',
       tags: ['Python', 'TensorFlow', 'XGBoost', 'ML'],
-      period: '2023',
+      period: '2025',
       link: 'https://drive.google.com/file/d/1qAYZIOJh4SXRzgU32zsMbN7oaaw2SIWA/view?usp=sharing'
     },
     {
       title: 'Solar-Based Floor Cleaning Machine',
       description: 'Designed semi-automatic solar-powered cleaning robot with Bluetooth wireless control, ultrasonic obstacle detection, and multi-motor drive system.',
       tags: ['Arduino', 'ATmega328', 'IoT', 'Robotics'],
-      period: '2022',
+      period: '2024',
       link: 'https://drive.google.com/file/d/17VJkauPeLaSkXAN4ORlHGKX6kzMYkcts/view?usp=sharing'
     },
     {
       title: 'Closed Loop Control for Brushed and Brushless DC Motor using TI Delfino F28379D',
       description: 'Analysed open-loop and closed-loop transfer functions of a DC motor and plotted step responses. Executed and troubleshooted closed-loop speed control on an 8-pole BLDC motor using a PI controller and Hall sensors.',
       tags: ['Code Composer Studio', 'C/C++', 'Delfino C2000', 'TMS320F28379D'],
-      period: 'Oct 2024 – Dec 2024',
+      period: '2024',
       link: 'https://drive.google.com/drive/folders/1Ic2mqRDxfGAHXJ-Iox7s6XuZWUch40e1?usp=sharing'
     },
     {
       title: 'Underground Cable Fault Detection using Arduino',
       description: 'Designed and implemented a microcontroller-based system to identify and locate open- and short-circuit faults in underground cables using Ohm\'s law principles. Built test setup with Arduino UNO, 16×2 LCD, and resistor network (0.01 Ω/m) to detect fault distance up to 2m. Achieved fault-location accuracy within ±5cm with integrated buzzer alarm and on-screen distance display.',
       tags: ['Arduino IDE', 'ATmega328', 'LCD', 'Embedded Systems'],
-      period: 'Sept 2022 – Dec 2022',
+      period: '2019',
       link: 'https://drive.google.com/file/d/1Y8ooTt7QaQtcaBZewQaN2_TuIRRxgp5-/view?usp=sharing'
     },
     {
       title: 'Human-Following Robot',
       description: 'Developed IR and ultrasonic sensor-based autonomous motion control system using Arduino. Implemented real-time object tracking and following algorithms.',
       tags: ['Arduino', 'Sensors', 'Robotics', 'Embedded'],
-      period: '2021',
+      period: '2022',
       link: 'https://drive.google.com/file/d/1pPANnVEQp04vGc1LApGOMTI-qL8ttYQe/view?usp=sharing'
     }
   ];
@@ -413,38 +413,6 @@ export default function Home() {
             Experience
           </h2>
           <div className="space-y-10">
-            {/* Current Position */}
-            <div className={`border-2 rounded-xl p-8 ${
-              darkMode
-                ? 'bg-black border-green-500 shadow-[6px_6px_0px_0px_rgba(34,197,94,0.2)]'
-                : 'bg-white border-green-600 shadow-[6px_6px_0px_0px_rgba(34,197,94,0.3)]'
-            }`}>
-              <div className="flex flex-wrap items-center gap-3 mb-4">
-                <span className={`px-3 py-1 text-xs font-bold rounded-full ${
-                  darkMode ? 'bg-green-500 text-black' : 'bg-green-600 text-white'
-                }`}>CURRENT</span>
-                <h3 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Junior Software Developer</h3>
-              </div>
-              <div>
-                <p className={`text-xl mb-1 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>EF&T Telecommunications and ICT Services</p>
-                <p className={`text-sm mb-1 ${darkMode ? 'text-gray-500' : 'text-gray-500'}`}>Aug 2025 - Present · 3 mos</p>
-                <p className={`text-sm mb-4 ${darkMode ? 'text-gray-500' : 'text-gray-500'}`}>Bengaluru, Karnataka, India · Hybrid · Full-time</p>
-                <p className={`leading-relaxed mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                  Responsible for developing enterprise-grade web applications using modern JavaScript technologies. Key contributions include full-stack development using React.js, Node.js, Express.js, and TypeScript for scalable web applications. Cloud-native application development with AWS services: Amplify, Lambda, API Gateway, DynamoDB, S3, Cognito, CloudWatch. GraphQL API design and implementation with real-time data synchronization capabilities. Cross-cultural collaboration with teams in Australia and India, ensuring effective communication and project delivery. Technical leadership in establishing development practices for the company's new Bangalore operations.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {['AWS', 'TypeScript', 'Node.js', 'React.js', 'GraphQL', 'DynamoDB', 'Cognito', 'S3', 'CloudWatch', 'Lambda', 'API Gateway'].map((skill) => (
-                    <span
-                      key={skill}
-                      className={`px-3 py-1 rounded-md text-xs font-medium ${darkMode ? 'bg-white text-gray-900' : 'bg-gray-900 text-white'}`}
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
             <a
               href="https://drive.google.com/file/d/1YXr2pfkK6zgzQJihle4pbP5fv4UL1T96/view?usp=sharing"
               target="_blank"

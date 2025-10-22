@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Christen George - Full Stack Developer",
-  description: "Portfolio of Christen George, a Full Stack Developer specializing in modern web technologies",
+  title: "Christen George - Electrical Engineer",
+  description: "Portfolio of Christen George, an Electrical Engineer specializing in Power Systems, Renewable Energy, and Power Electronics",
 };
 
 export default function RootLayout({

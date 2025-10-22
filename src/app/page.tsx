@@ -3,15 +3,17 @@
 import { useState, useEffect } from 'react';
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const [typedText, setTypedText] = useState('');
 
   useEffect(() => {
-    // Check for saved theme preference or default to light mode
+    // Check for saved theme preference or default to dark mode
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
+    if (savedTheme === 'light') {
+      setDarkMode(false);
+    } else {
       setDarkMode(true);
     }
   }, []);
@@ -124,36 +126,65 @@ export default function Home() {
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-black' : 'bg-white'}`}>
       {/* Navigation Bar */}
-      <nav className={`fixed top-0 left-0 right-0 z-40 backdrop-blur-md border-b transition-colors duration-300 ${
+      <nav className={`fixed top-0 left-0 right-0 z-40 backdrop-blur-lg border-b-2 transition-all duration-300 ${
         darkMode
-          ? 'bg-black/80 border-gray-700'
-          : 'bg-white/80 border-gray-200'
+          ? 'bg-black/90 border-gray-700 shadow-[0_4px_20px_rgba(255,255,255,0.05)]'
+          : 'bg-white/90 border-gray-900 shadow-[0_4px_20px_rgba(0,0,0,0.1)]'
       }`}>
-        <div className="max-w-6xl mx-auto px-6 py-4">
+        <div className="max-w-6xl mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
-            <a href="#home" className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-              CG
+            <a
+              href="#home"
+              className={`text-xl font-bold tracking-tight transition-all duration-300 hover:-translate-y-0.5 ${
+                darkMode ? 'text-white hover:text-gray-300' : 'text-gray-900 hover:text-gray-600'
+              }`}
+            >
+              Christen George
             </a>
-            <div className="flex items-center gap-6">
-              <a href="#education" className={`text-sm font-medium transition-colors ${
-                darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
-              }`}>
+            <div className="flex items-center gap-8">
+              <a
+                href="#education"
+                className={`text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 relative group ${
+                  darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'
+                }`}
+              >
                 Education
+                <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
+                  darkMode ? 'bg-white' : 'bg-gray-900'
+                }`}></span>
               </a>
-              <a href="#skills" className={`text-sm font-medium transition-colors ${
-                darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
-              }`}>
+              <a
+                href="#skills"
+                className={`text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 relative group ${
+                  darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'
+                }`}
+              >
                 Skills
+                <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
+                  darkMode ? 'bg-white' : 'bg-gray-900'
+                }`}></span>
               </a>
-              <a href="#projects" className={`text-sm font-medium transition-colors ${
-                darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
-              }`}>
+              <a
+                href="#projects"
+                className={`text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 relative group ${
+                  darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'
+                }`}
+              >
                 Projects
+                <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
+                  darkMode ? 'bg-white' : 'bg-gray-900'
+                }`}></span>
               </a>
-              <a href="#experience" className={`text-sm font-medium transition-colors ${
-                darkMode ? 'text-gray-400 hover:text-white' : 'text-gray-600 hover:text-gray-900'
-              }`}>
+              <a
+                href="#experience"
+                className={`text-sm font-semibold transition-all duration-300 hover:-translate-y-0.5 relative group ${
+                  darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-700 hover:text-gray-900'
+                }`}
+              >
                 Experience
+                <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
+                  darkMode ? 'bg-white' : 'bg-gray-900'
+                }`}></span>
               </a>
             </div>
           </div>
@@ -205,30 +236,17 @@ export default function Home() {
             Christen George
           </h1>
 
-          <div className="flex flex-col gap-3 mb-8">
-            <p className={`text-3xl font-semibold ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-              Electrical Engineer
-            </p>
-            <div className={`flex flex-wrap gap-3 text-lg ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-              <span className="flex items-center gap-2">
-                <span className={`w-1.5 h-1.5 rounded-full ${darkMode ? 'bg-gray-500' : 'bg-gray-400'}`}></span>
-                M.S. Electrical Engineering
-              </span>
-              <span className="flex items-center gap-2">
-                <span className={`w-1.5 h-1.5 rounded-full ${darkMode ? 'bg-gray-500' : 'bg-gray-400'}`}></span>
-                Texas A&M University
-              </span>
-              <span className="flex items-center gap-2">
-                <span className={`w-1.5 h-1.5 rounded-full ${darkMode ? 'bg-gray-500' : 'bg-gray-400'}`}></span>
-                Expected May 2026
-              </span>
-            </div>
-          </div>
+          <p className={`text-3xl font-semibold mb-6 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+            Electrical Engineer
+          </p>
+
+          <p className={`text-lg mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+            M.S. Electrical Engineering • Texas A&M University • Expected May 2026
+          </p>
 
           <p className={`text-xl max-w-4xl leading-relaxed mb-10 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-            Specializing in Power Systems, Renewable Energy, and Power Electronics.
-            Passionate about developing innovative and sustainable energy solutions through
-            advanced modeling, simulation, and control systems.
+            I love building things that solve real problems. Whether it's optimizing a power system, automating a process, or turning an idea into a working prototype, I enjoy figuring out how things work—and how to make them better.
+            Every project I've worked on has started with a question, a bit of curiosity, and a challenge worth solving.
           </p>
 
           <div className="flex flex-wrap gap-4">

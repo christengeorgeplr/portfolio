@@ -225,7 +225,7 @@ export default function Home() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className={`md:hidden border-t-2 ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
+          <div className="md:hidden">
             <div className="px-6 py-4 space-y-3">
               <a
                 href="#education"

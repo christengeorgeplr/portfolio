@@ -245,8 +245,8 @@ export default function Home() {
           </p>
 
           <p className={`text-xl max-w-4xl leading-relaxed mb-10 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-            I love building things that solve real problems. Whether it's optimizing a power system, automating a process, or turning an idea into a working prototype, I enjoy figuring out how things work—and how to make them better.
-            Every project I've worked on has started with a question, a bit of curiosity, and a challenge worth solving.
+            I love building things that solve real problems. Whether it&apos;s optimizing a power system, automating a process, or turning an idea into a working prototype, I enjoy figuring out how things work—and how to make them better.
+            Every project I&apos;ve worked on has started with a question, a bit of curiosity, and a challenge worth solving.
           </p>
 
           <div className="flex flex-wrap gap-4">

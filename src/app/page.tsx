@@ -413,6 +413,38 @@ export default function Home() {
             Experience
           </h2>
           <div className="space-y-10">
+            {/* Current Position */}
+            <div className={`border-2 rounded-xl p-8 ${
+              darkMode
+                ? 'bg-black border-green-500 shadow-[6px_6px_0px_0px_rgba(34,197,94,0.2)]'
+                : 'bg-white border-green-600 shadow-[6px_6px_0px_0px_rgba(34,197,94,0.3)]'
+            }`}>
+              <div className="flex flex-wrap items-center gap-3 mb-4">
+                <span className={`px-3 py-1 text-xs font-bold rounded-full ${
+                  darkMode ? 'bg-green-500 text-black' : 'bg-green-600 text-white'
+                }`}>CURRENT</span>
+                <h3 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Junior Software Developer</h3>
+              </div>
+              <div>
+                <p className={`text-xl mb-1 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>EF&T Telecommunications and ICT Services</p>
+                <p className={`text-sm mb-1 ${darkMode ? 'text-gray-500' : 'text-gray-500'}`}>Aug 2025 - Present · 3 mos</p>
+                <p className={`text-sm mb-4 ${darkMode ? 'text-gray-500' : 'text-gray-500'}`}>Bengaluru, Karnataka, India · Hybrid · Full-time</p>
+                <p className={`leading-relaxed mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                  Responsible for developing enterprise-grade web applications using modern JavaScript technologies. Key contributions include full-stack development using React.js, Node.js, Express.js, and TypeScript for scalable web applications. Cloud-native application development with AWS services: Amplify, Lambda, API Gateway, DynamoDB, S3, Cognito, CloudWatch. GraphQL API design and implementation with real-time data synchronization capabilities. Cross-cultural collaboration with teams in Australia and India, ensuring effective communication and project delivery. Technical leadership in establishing development practices for the company's new Bangalore operations.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {['AWS', 'TypeScript', 'Node.js', 'React.js', 'GraphQL', 'DynamoDB', 'Cognito', 'S3', 'CloudWatch', 'Lambda', 'API Gateway'].map((skill) => (
+                    <span
+                      key={skill}
+                      className={`px-3 py-1 rounded-md text-xs font-medium ${darkMode ? 'bg-white text-gray-900' : 'bg-gray-900 text-white'}`}
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             <a
               href="https://drive.google.com/file/d/1YXr2pfkK6zgzQJihle4pbP5fv4UL1T96/view?usp=sharing"
               target="_blank"

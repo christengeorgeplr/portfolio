@@ -147,10 +147,10 @@ export default function Home() {
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-black' : 'bg-white'}`}>
       {/* Navigation Bar */}
-      <nav className={`fixed top-0 left-0 right-0 z-40 backdrop-blur-lg md:border-b-2 transition-all duration-300 ${
+      <nav className={`md:border-b-2 transition-all duration-300 ${
         darkMode
-          ? 'bg-black/90 md:border-gray-700 shadow-[0_4px_20px_rgba(255,255,255,0.05)]'
-          : 'bg-white/90 md:border-gray-900 shadow-[0_4px_20px_rgba(0,0,0,0.1)]'
+          ? 'bg-black md:border-gray-700'
+          : 'bg-white md:border-gray-900'
       }`}>
         <div className="max-w-6xl mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
@@ -366,7 +366,7 @@ export default function Home() {
         <div className={`h-px mb-24 ${darkMode ? 'bg-gray-700' : 'bg-gray-200'}`}></div>
 
         {/* Education Section */}
-        <section id="education" className="mb-24 scroll-mt-24">
+        <section id="education" className="mb-24">
           <div className="flex items-center gap-4 mb-12">
             <svg className={`w-10 h-10 ${darkMode ? 'text-white' : 'text-gray-900'}`} fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
@@ -438,7 +438,7 @@ export default function Home() {
         <div className={`h-px mb-24 ${darkMode ? 'bg-gray-700' : 'bg-gray-200'}`}></div>
 
         {/* Technical Skills Section */}
-        <section id="skills" className="mb-24 scroll-mt-24">
+        <section id="skills" className="mb-24">
           <h2 className={`text-4xl font-bold mb-8 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
             Technical Expertise
           </h2>
@@ -463,7 +463,7 @@ export default function Home() {
         <div className={`h-px mb-24 ${darkMode ? 'bg-gray-700' : 'bg-gray-200'}`}></div>
 
         {/* Projects Section */}
-        <section id="projects" className="mb-24 scroll-mt-24">
+        <section id="projects" className="mb-24">
           <h2 className={`text-4xl font-bold mb-12 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
             Featured Projects
           </h2>
@@ -532,7 +532,7 @@ export default function Home() {
         <div className={`h-px mb-24 ${darkMode ? 'bg-gray-700' : 'bg-gray-200'}`}></div>
 
         {/* Experience Section */}
-        <section id="experience" className="mb-24 scroll-mt-24">
+        <section id="experience" className="mb-24">
           <h2 className={`text-4xl font-bold mb-12 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
             Experience
           </h2>

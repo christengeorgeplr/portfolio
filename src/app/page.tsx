@@ -52,10 +52,30 @@ export default function Home() {
   }, []);
 
   const skills = {
-    'Power & Energy': ['Power System Transients', 'Grid Integration', 'Renewable Energy', 'Protection & Surge Analysis'],
-    'Power Electronics': ['Rectifiers & Inverters', 'DC-DC Converters', 'PWM Control', 'DSP Motor Control'],
-    'Simulation Tools': ['MATLAB/Simulink', 'EMTP', 'PSCAD', 'PowerWorld', 'LTspice'],
-    'Programming': ['Python', 'C/C++', 'Machine Learning', 'Digital Twin Modeling'],
+    'Power & Energy': {
+      description: 'Understanding how electricity moves and behaves across systems — from grid integration to renewable setups and surge protection.',
+      tags: ['Power System Transients', 'Grid Integration', 'Renewable Energy', 'Protection & Surge Analysis']
+    },
+    'Power Electronics': {
+      description: 'Working with converters, inverters, and control methods that keep systems stable and efficient.',
+      tags: ['Rectifiers & Inverters', 'DC-DC Converters', 'PWM Control', 'DSP Motor Control']
+    },
+    'Control & Automation': {
+      description: 'Using microcontrollers and sensors to make systems respond in real time — from PWM control to closed-loop automation.',
+      tags: ['Microcontrollers', 'Sensors', 'Real-time Control', 'Closed-loop Systems']
+    },
+    'Simulation & Modeling': {
+      description: 'Bringing ideas to life first through tools like MATLAB, EMTP, PSCAD, and PowerWorld before building them in hardware.',
+      tags: ['MATLAB/Simulink', 'EMTP', 'PSCAD', 'PowerWorld', 'LTspice']
+    },
+    'Programming & Data': {
+      description: 'Using Python, C++, and machine learning to turn data into insight — from digital twins to automated models.',
+      tags: ['Python', 'C/C++', 'Machine Learning', 'Digital Twin Modeling']
+    },
+    'Hardware & Testing': {
+      description: 'Hands-on experience with oscilloscopes, motor drivers, and prototype setups that test how theory holds up in practice.',
+      tags: ['Oscilloscopes', 'Motor Drivers', 'Prototyping', 'Testing & Validation']
+    }
   };
 
   const projects = [
@@ -362,16 +382,15 @@ export default function Home() {
                 ? 'bg-black border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
                 : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
             }`}>
-              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2 mb-4">
-                <div>
-                  <h3 className={`text-2xl font-bold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Master of Science in Electrical Engineering</h3>
-                  <p className={`text-xl mb-1 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Texas A&M University</p>
-                  <p className={darkMode ? 'text-gray-400' : 'text-gray-600'}>College Station, TX</p>
-                </div>
-                <div className="text-left lg:text-right">
-                  <p className={`text-lg font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Expected: May 2026</p>
-                  <p className={darkMode ? 'text-gray-300' : 'text-gray-700'}>GPA: 3.5/4.0</p>
-                </div>
+              <div className="mb-4">
+                <h3 className={`text-2xl font-bold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Master of Science in Electrical Engineering</h3>
+                <p className={`text-lg mb-1 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Texas A&M University, College Station, TX</p>
+                <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Expected: May 2026 • GPA: 3.5/4.0</p>
+
+                <p className={`leading-relaxed mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                  Focused on Energy and Power Systems, exploring how renewable integration, power electronics, and advanced control systems can make the grid smarter and more resilient.
+                  Projects in simulation, automation, and embedded control helped me turn classroom theory into practical engineering solutions.
+                </p>
               </div>
               <div className="mt-4">
                 <p className={`text-sm font-semibold mb-3 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Relevant Coursework:</p>
@@ -391,16 +410,15 @@ export default function Home() {
                 ? 'bg-black border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
                 : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
             }`}>
-              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-2 mb-4">
-                <div>
-                  <h3 className={`text-2xl font-bold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Bachelor of Technology in Electrical and Electronics Engineering</h3>
-                  <p className={`text-xl mb-1 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Karunya Institute of Technology and Sciences</p>
-                  <p className={darkMode ? 'text-gray-400' : 'text-gray-600'}>Coimbatore, India</p>
-                </div>
-                <div className="text-left lg:text-right">
-                  <p className={`text-lg font-semibold ${darkMode ? 'text-white' : 'text-gray-900'}`}>Graduated: May 2023</p>
-                  <p className={darkMode ? 'text-gray-300' : 'text-gray-700'}>CGPA: 6.2/10</p>
-                </div>
+              <div className="mb-4">
+                <h3 className={`text-2xl font-bold mb-2 ${darkMode ? 'text-white' : 'text-gray-900'}`}>Bachelor of Technology in Electrical and Electronics Engineering</h3>
+                <p className={`text-lg mb-1 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Karunya Institute of Technology and Sciences, Coimbatore, India</p>
+                <p className={`text-sm mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>Graduated: May 2023 • CGPA: 6.2/10</p>
+
+                <p className={`leading-relaxed mb-4 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                  Built a strong foundation in power systems, electronics, and control theory, leading to several prototype projects on renewable energy and smart grid applications.
+                  My undergraduate work sparked a lasting interest in solving energy efficiency and automation problems through technology.
+                </p>
               </div>
               <div className="mt-4">
                 <p className={`text-sm font-semibold mb-3 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Relevant Coursework:</p>
@@ -421,27 +439,21 @@ export default function Home() {
 
         {/* Technical Skills Section */}
         <section id="skills" className="mb-24 scroll-mt-24">
-          <h2 className={`text-4xl font-bold mb-12 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+          <h2 className={`text-4xl font-bold mb-8 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
             Technical Expertise
           </h2>
+          <p className={`text-lg mb-12 max-w-4xl ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+            I like figuring things out — how systems behave, how to make them more efficient, and how small changes can lead to big improvements. These are the tools and areas I&apos;ve learned to use by building and troubleshooting real projects.
+          </p>
           <div className="grid md:grid-cols-2 gap-8">
-            {Object.entries(skills).map(([category, items]) => (
+            {Object.entries(skills).map(([category, {description, tags}]) => (
               <div key={category} className={`border-2 rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 ${
                 darkMode
                   ? 'bg-black border-gray-700 shadow-[6px_6px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[8px_8px_0px_0px_rgba(255,255,255,0.15)]'
                   : 'bg-white border-gray-900 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]'
               }`}>
-                <h3 className={`text-xl font-bold mb-4 ${darkMode ? 'text-white' : 'text-gray-900'}`}>{category}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {items.map((skill) => (
-                    <span
-                      key={skill}
-                      className={`px-3 py-1.5 rounded-md text-sm ${darkMode ? 'bg-black text-gray-300' : 'bg-gray-100 text-gray-700'}`}
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
+                <h3 className={`text-xl font-bold mb-3 ${darkMode ? 'text-white' : 'text-gray-900'}`}>{category}</h3>
+                <p className={`text-sm mb-4 leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>{description}</p>
               </div>
             ))}
           </div>

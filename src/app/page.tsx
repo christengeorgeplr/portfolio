@@ -588,9 +588,9 @@ export default function Home() {
         {/* Footer */}
         <footer className={`pt-12 pb-8 border-t ${darkMode ? 'border-gray-700' : 'border-gray-200'}`}>
           <p className={`text-center text-sm ${darkMode ? 'text-gray-500' : 'text-gray-500'}`}>© 2025 Christen George. All rights reserved.</p>
-          <p className={`text-center text-xs mt-2 ${darkMode ? 'text-gray-600' : 'text-gray-400'}`}>
+          {/* <p className={`text-center text-xs mt-2 ${darkMode ? 'text-gray-600' : 'text-gray-400'}`}>
             Developed by Amal T Scaria - Contact @ <a href="mailto:amaltscaria22@gmail.com" className="hover:underline">amaltscaria22@gmail.com</a>
-          </p>
+          </p> */}
         </footer>
       </div>
     </div>

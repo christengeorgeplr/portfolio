@@ -291,7 +291,7 @@ export default function Home() {
 
       <div className="max-w-6xl mx-auto px-6 py-16">
         {/* Hero Section */}
-        <header id="home" className="mb-24 pt-24">
+        <header id="home" className="mb-24 pt-8">
           {/* 3D Hi Section with Typing Animation */}
           <div className="mb-8">
             <h2 className={`text-5xl font-bold mb-2 ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>

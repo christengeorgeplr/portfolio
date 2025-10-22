@@ -81,63 +81,63 @@ export default function Home() {
   const projects = [
     {
       title: 'Hybrid Solar–Wind Energy System for Grid Optimization',
-      description: 'Developed hybrid renewable energy model integrating 28.8 kW solar PV array with Perturb & Observe MPPT and 3.6 kW PMSG wind turbine. Maintained DC-bus voltage at 700±20V with ±3% power accuracy.',
+      description: 'I built a renewable energy model that joined a 28.8 kW solar array and a 3.6 kW wind turbine. The challenge was keeping the DC-bus stable under fast-changing conditions. After tuning the Perturb & Observe MPPT and control loops, the system held steady within ±3% — showing how hybrid energy sources can complement each other.',
       tags: ['MATLAB/Simulink', 'MPPT', 'Grid Integration', 'Simscape'],
       period: '2025',
       link: 'https://drive.google.com/file/d/1ePwNvMm6jjAcWexa1N7CgnsFl4c2M3a9/view?usp=sharing'
     },
     {
       title: '500 kV PV-Integrated Lightning Surge Study',
-      description: 'Performed high-voltage transient analysis on transmission grid with WECC_PVP_1 inverter. Reduced peak overvoltage from 6 MV to <800 kV, improving insulation margin by 20%.',
+      description: 'I studied how lightning surges affect high-voltage lines when PV systems are tied to the grid. Using EMTP, I tested insulation behavior and reduced over-voltages from 6 MV to under 800 kV — improving safety margins by about 20%. It taught me how protection really keeps renewables reliable at scale.',
       tags: ['EMTP', 'ATPDraw', 'Protection', 'High Voltage'],
       period: '2025',
       link: 'https://drive.google.com/file/d/19GxGJfXoWSjJ3bEpLPo9bAPM3IuqZ6WU/view?usp=sharing'
     },
     {
       title: 'Multi-Converter System Analysis',
-      description: 'Analyzed four-converter DC-bus system using Conversion Function Theory (CFT). Reduced computation time by >85% while maintaining identical transient response and voltage ripple ≈1%.',
+      description: 'This project started as a curiosity about converter interactions. I modeled a four-converter DC-bus and learned to simplify it using Conversion Function Theory. That change cut simulation time by 80% while keeping results accurate — a good reminder that smarter math can save real engineering time.',
       tags: ['MATLAB', 'Control Systems', 'CFT', 'Simulink'],
       period: '2024',
       link: 'https://drive.google.com/file/d/1SMuhlAnqAHMSfKUvbyEyL3dUnnMuIn_6/view?usp=sharing'
     },
     {
       title: 'UPS: PFC Rectifier + Bidirectional DC–DC Converter',
-      description: 'Designed front-end converter for uninterruptible power supply with PFC rectifier and bidirectional buck/boost converter. Verified efficiency and voltage regulation.',
+      description: 'I designed and simulated a UPS front-end with power-factor correction and bidirectional flow. Getting efficiency and voltage regulation right took plenty of trial-and-error, but it paid off — the converter responded fast and stayed stable even under load jumps.',
       tags: ['LTspice', 'Power Electronics', 'MATLAB'],
       period: '2024',
       link: 'https://drive.google.com/file/d/1K_pz5XUOLMyvaLfxoYUCfI3CtMHZN4Hi/view?usp=sharing'
     },
     {
       title: 'Solar Twin – AI Digital Twin Model',
-      description: 'Built ML-based forecasting and anomaly-detection models for solar plants using TensorFlow and XGBoost. Implemented predictive analytics for performance optimization.',
+      description: 'I wanted to predict solar-plant performance before it dropped. Using Python, TensorFlow, and XGBoost, I built a digital twin that learned from real production data and flagged losses early. It was my first mix of power systems and machine learning — and it worked.',
       tags: ['Python', 'TensorFlow', 'XGBoost', 'ML'],
       period: '2025',
       link: 'https://drive.google.com/file/d/1qAYZIOJh4SXRzgU32zsMbN7oaaw2SIWA/view?usp=sharing'
     },
     {
       title: 'Solar-Based Floor Cleaning Machine',
-      description: 'Designed semi-automatic solar-powered cleaning robot with Bluetooth wireless control, ultrasonic obstacle detection, and multi-motor drive system.',
+      description: 'A small idea: a cleaner powered by the sun. I designed a semi-automatic robot that used ultrasonic sensors and Bluetooth control. It wasn&apos;t perfect, but seeing it move under its own logic was one of those "this actually works" moments.',
       tags: ['Arduino', 'ATmega328', 'IoT', 'Robotics'],
       period: '2024',
       link: 'https://drive.google.com/file/d/17VJkauPeLaSkXAN4ORlHGKX6kzMYkcts/view?usp=sharing'
     },
     {
-      title: 'Closed Loop Control for Brushed and Brushless DC Motor using TI Delfino F28379D',
-      description: 'Analysed open-loop and closed-loop transfer functions of a DC motor and plotted step responses. Executed and troubleshooted closed-loop speed control on an 8-pole BLDC motor using a PI controller and Hall sensors.',
+      title: 'Closed Loop Control for Brushed and Brushless DC Motors',
+      description: 'Using a TI Delfino F28379D board, I compared open-loop and closed-loop control for DC motors. Writing and debugging the PI controller taught me more about motor behavior than any textbook — especially how theory breaks first, and then you fix it.',
       tags: ['Code Composer Studio', 'C/C++', 'Delfino C2000', 'TMS320F28379D'],
       period: '2024',
       link: 'https://drive.google.com/drive/folders/1Ic2mqRDxfGAHXJ-Iox7s6XuZWUch40e1?usp=sharing'
     },
     {
       title: 'Underground Cable Fault Detection using Arduino',
-      description: 'Designed and implemented a microcontroller-based system to identify and locate open- and short-circuit faults in underground cables using Ohm\'s law principles. Built test setup with Arduino UNO, 16×2 LCD, and resistor network (0.01 Ω/m) to detect fault distance up to 2m. Achieved fault-location accuracy within ±5cm with integrated buzzer alarm and on-screen distance display.',
+      description: 'I built a circuit that could find faults in underground cables with just an Arduino UNO and a bit of physics. After many tweaks, it could locate faults within 5 cm accuracy. A simple build that showed how precise low-cost systems can be.',
       tags: ['Arduino IDE', 'ATmega328', 'LCD', 'Embedded Systems'],
       period: '2019',
       link: 'https://drive.google.com/file/d/1Y8ooTt7QaQtcaBZewQaN2_TuIRRxgp5-/view?usp=sharing'
     },
     {
       title: 'Human-Following Robot',
-      description: 'Developed IR and ultrasonic sensor-based autonomous motion control system using Arduino. Implemented real-time object tracking and following algorithms.',
+      description: 'This was my first serious project — a robot that followed people using IR and ultrasonic sensors. It started as a weekend idea and ended as a working prototype that tracked movement smoothly. It&apos;s still my favorite example of how curiosity becomes engineering.',
       tags: ['Arduino', 'Sensors', 'Robotics', 'Embedded'],
       period: '2022',
       link: 'https://drive.google.com/file/d/1pPANnVEQp04vGc1LApGOMTI-qL8ttYQe/view?usp=sharing'
@@ -553,7 +553,7 @@ export default function Home() {
                   <p className={`text-xl mb-1 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>Youngminds Technology Solutions</p>
                   <p className={`text-sm mb-4 ${darkMode ? 'text-gray-500' : 'text-gray-500'}`}>Dec 2022 – Jan 2023 • India</p>
                   <p className={`leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    Developed wind turbine emulator model using DC motors and MATLAB/Simulink. Implemented control systems for generator performance analysis under variable wind conditions. Configured DC drive and load control hardware for accurate real-time turbine emulation.
+                    I worked on building a wind turbine emulator using DC motors and MATLAB/Simulink. The challenge was making the model react like a real turbine under changing wind speeds. After tuning the control loops and drive setup, it could simulate generator behavior smoothly — a good lesson in turning theory into working hardware.
                   </p>
                 </div>
                 <span className={`transition-colors ${darkMode ? 'text-gray-500 group-hover:text-white' : 'text-gray-400 group-hover:text-gray-900'}`}>→</span>
@@ -576,7 +576,7 @@ export default function Home() {
                   <p className={`text-xl mb-1 ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>J.R. Electricals</p>
                   <p className={`text-sm mb-4 ${darkMode ? 'text-gray-500' : 'text-gray-500'}`}>May 2021 – Jul 2021 • India</p>
                   <p className={`leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
-                    Gained hands-on experience with 400/220 kV GIS substations, protection schemes, and SCADA systems. Studied IEC standards for grounding and lightning protection. Assisted in equipment inspection and documentation of HT/LT installation processes.
+                    I spent the summer on-site learning how power systems work in real life — from 400/220 kV substations to protection and SCADA systems. I helped inspect installations, review grounding layouts, and document HT/LT processes. Seeing how every small detail affects safety and reliability taught me what &ldquo;precision&rdquo; means in power engineering.
                   </p>
                 </div>
                 <span className={`transition-colors ${darkMode ? 'text-gray-500 group-hover:text-white' : 'text-gray-400 group-hover:text-gray-900'}`}>→</span>

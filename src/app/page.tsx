@@ -147,10 +147,10 @@ export default function Home() {
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-black' : 'bg-white'}`}>
       {/* Navigation Bar */}
-      <nav className={`fixed top-0 left-0 right-0 z-40 backdrop-blur-lg border-b-2 transition-all duration-300 ${
+      <nav className={`fixed top-0 left-0 right-0 z-40 backdrop-blur-lg md:border-b-2 transition-all duration-300 ${
         darkMode
-          ? 'bg-black/90 border-gray-700 shadow-[0_4px_20px_rgba(255,255,255,0.05)]'
-          : 'bg-white/90 border-gray-900 shadow-[0_4px_20px_rgba(0,0,0,0.1)]'
+          ? 'bg-black/90 md:border-gray-700 shadow-[0_4px_20px_rgba(255,255,255,0.05)]'
+          : 'bg-white/90 md:border-gray-900 shadow-[0_4px_20px_rgba(0,0,0,0.1)]'
       }`}>
         <div className="max-w-6xl mx-auto px-6 py-5">
           <div className="flex items-center justify-between">

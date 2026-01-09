@@ -8,6 +8,8 @@ export default function Home() {
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const [typedText, setTypedText] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [navVisible, setNavVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     // Check for saved theme preference or default to dark mode
@@ -23,6 +25,26 @@ export default function Home() {
     // Update localStorage when theme changes
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
+
+  // Navbar show/hide on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        // Scrolling down - show navbar
+        setNavVisible(true);
+      } else {
+        // Scrolling up - hide navbar
+        setNavVisible(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   // Typing animation effect with loop
   useEffect(() => {
@@ -154,7 +176,9 @@ export default function Home() {
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-black' : 'bg-white'}`}>
       {/* Navigation Bar */}
-      <nav className={`md:border-b-2 transition-all duration-300 ${
+      <nav className={`fixed top-0 left-0 right-0 z-50 md:border-b-2 transition-all duration-500 ease-in-out ${
+        navVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+      } ${
         darkMode
           ? 'bg-black md:border-gray-700'
           : 'bg-white md:border-gray-900'

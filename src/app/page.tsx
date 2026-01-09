@@ -115,6 +115,13 @@ export default function Home() {
       link: 'https://drive.google.com/file/d/1qAYZIOJh4SXRzgU32zsMbN7oaaw2SIWA/view?usp=sharing'
     },
     {
+      title: 'ML-Based Power Quality Disturbance Classifier for Smart Grids',
+      description: 'I compared five ML classifiers — from Logistic Regression to LSTMs — to detect power disturbances in voltage waveforms. By engineering 36 features across time, frequency, and wavelet domains, all models hit 100% accuracy. The key insight: simple models matched deep learning while being 40× faster, ideal for real-time grid monitoring.',
+      tags: ['Python', 'Machine Learning', 'Signal Processing', 'Deep Learning'],
+      period: '2025',
+      link: 'https://drive.google.com/drive/folders/1v51YdNYv5r9gf-ZnW_Jkyt2y6SjkqMZQ?usp=sharing'
+    },
+    {
       title: 'Solar-Based Floor Cleaning Machine',
       description: 'A small idea: a cleaner powered by the sun. I designed a semi-automatic robot that used ultrasonic sensors and Bluetooth control. It wasn&apos;t perfect, but seeing it move under its own logic was one of those "this actually works" moments.',
       tags: ['Arduino', 'ATmega328', 'IoT', 'Robotics'],
@@ -446,7 +453,7 @@ export default function Home() {
             I like figuring things out — how systems behave, how to make them more efficient, and how small changes can lead to big improvements. These are the tools and areas I&apos;ve learned to use by building and troubleshooting real projects.
           </p>
           <div className="grid md:grid-cols-2 gap-8">
-            {Object.entries(skills).map(([category, {description, tags}]) => (
+            {Object.entries(skills).map(([category, {description}]) => (
               <div key={category} className={`border-2 rounded-xl p-6 transition-all duration-300 hover:-translate-y-3 ${
                 darkMode
                   ? 'bg-black border-gray-700 shadow-[8px_8px_0px_0px_rgba(255,255,255,0.1)] hover:shadow-[12px_12px_0px_0px_rgba(255,255,255,0.3),0_0_30px_rgba(255,255,255,0.2)]'

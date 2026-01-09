@@ -201,12 +201,12 @@ export default function Home() {
       />
       {/* Floating Pill Navigation - Bottom on all screens */}
       <nav className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-in-out
-        bottom-10 md:bottom-6
+        bottom-6 md:bottom-6
         ${navVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}
         ${navVisible ? 'translate-y-0' : 'translate-y-12'}
       `}>
         <div
-          className={`flex items-center gap-1 md:gap-1 px-3 md:px-2 py-2 md:py-2 rounded-full border transition-all duration-300
+          className={`flex items-center gap-2 md:gap-1 px-4 md:px-2 py-1.5 md:py-2 rounded-full border transition-all duration-300
             ${!isMobile ? 'backdrop-blur-xl' : ''}
             ${!isMobile && darkMode ? 'bg-gray-900/80 border-purple-500/30 shadow-[0_0_40px_rgba(139,92,246,0.2)]' : ''}
             ${!isMobile && !darkMode ? 'bg-white/90 border-purple-300/50 shadow-[0_4px_40px_rgba(139,92,246,0.15)]' : ''}

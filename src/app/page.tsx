@@ -31,11 +31,11 @@ export default function Home() {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY) {
-        // Scrolling down - show navbar
+      if (currentScrollY < lastScrollY) {
+        // Scrolling up - show navbar
         setNavVisible(true);
       } else {
-        // Scrolling up - hide navbar
+        // Scrolling down - hide navbar
         setNavVisible(false);
       }
 

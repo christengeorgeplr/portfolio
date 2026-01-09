@@ -80,18 +80,25 @@ export default function Home() {
 
   const projects = [
     {
-      title: 'Hybrid Solar–Wind Energy System for Grid Optimization',
-      description: 'I built a renewable energy model that joined a 28.8 kW solar array and a 3.6 kW wind turbine. The challenge was keeping the DC-bus stable under fast-changing conditions. After tuning the Perturb & Observe MPPT and control loops, the system held steady within ±3% — showing how hybrid energy sources can complement each other.',
-      tags: ['MATLAB/Simulink', 'MPPT', 'Grid Integration', 'Simscape'],
-      period: '2025',
-      link: 'https://drive.google.com/file/d/1ePwNvMm6jjAcWexa1N7CgnsFl4c2M3a9/view?usp=sharing'
-    },
-    {
       title: '500 kV PV-Integrated Lightning Surge Study',
       description: 'I studied how lightning surges affect high-voltage lines when PV systems are tied to the grid. Using EMTP, I tested insulation behavior and reduced over-voltages from 6 MV to under 800 kV — improving safety margins by about 20%. It taught me how protection really keeps renewables reliable at scale.',
       tags: ['EMTP', 'ATPDraw', 'Protection', 'High Voltage'],
       period: '2025',
       link: 'https://drive.google.com/file/d/19GxGJfXoWSjJ3bEpLPo9bAPM3IuqZ6WU/view?usp=sharing'
+    },
+    {
+      title: 'ML-Based Power Quality Disturbance Classifier for Smart Grids',
+      description: 'I compared five ML classifiers — from Logistic Regression to LSTMs — to detect power disturbances in voltage waveforms. By engineering 36 features across time, frequency, and wavelet domains, all models hit 100% accuracy. The key insight: simple models matched deep learning while being 40× faster, ideal for real-time grid monitoring.',
+      tags: ['Python', 'Machine Learning', 'Signal Processing', 'Deep Learning'],
+      period: '2025',
+      link: 'https://drive.google.com/drive/folders/1v51YdNYv5r9gf-ZnW_Jkyt2y6SjkqMZQ?usp=sharing'
+    },
+    {
+      title: 'Hybrid Solar–Wind Energy System for Grid Optimization',
+      description: 'I built a renewable energy model that joined a 28.8 kW solar array and a 3.6 kW wind turbine. The challenge was keeping the DC-bus stable under fast-changing conditions. After tuning the Perturb & Observe MPPT and control loops, the system held steady within ±3% — showing how hybrid energy sources can complement each other.',
+      tags: ['MATLAB/Simulink', 'MPPT', 'Grid Integration', 'Simscape'],
+      period: '2025',
+      link: 'https://drive.google.com/file/d/1ePwNvMm6jjAcWexa1N7CgnsFl4c2M3a9/view?usp=sharing'
     },
     {
       title: 'Multi-Converter System Analysis',
@@ -113,13 +120,6 @@ export default function Home() {
       tags: ['Python', 'TensorFlow', 'XGBoost', 'ML'],
       period: '2025',
       link: 'https://drive.google.com/file/d/1qAYZIOJh4SXRzgU32zsMbN7oaaw2SIWA/view?usp=sharing'
-    },
-    {
-      title: 'ML-Based Power Quality Disturbance Classifier for Smart Grids',
-      description: 'I compared five ML classifiers — from Logistic Regression to LSTMs — to detect power disturbances in voltage waveforms. By engineering 36 features across time, frequency, and wavelet domains, all models hit 100% accuracy. The key insight: simple models matched deep learning while being 40× faster, ideal for real-time grid monitoring.',
-      tags: ['Python', 'Machine Learning', 'Signal Processing', 'Deep Learning'],
-      period: '2025',
-      link: 'https://drive.google.com/drive/folders/1v51YdNYv5r9gf-ZnW_Jkyt2y6SjkqMZQ?usp=sharing'
     },
     {
       title: 'Solar-Based Floor Cleaning Machine',

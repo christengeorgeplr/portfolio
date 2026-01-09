@@ -7,7 +7,6 @@ export default function Home() {
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const [typedText, setTypedText] = useState('');
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [navVisible, setNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -200,75 +199,107 @@ export default function Home() {
                radial-gradient(ellipse at 0% 100%, rgba(59, 130, 246, 0.08) 0%, transparent 45%)`
         }}
       />
-      {/* Floating Pill Navigation - Top on mobile, Bottom on desktop */}
+      {/* Floating Pill Navigation - Bottom on all screens */}
       <nav className={`fixed left-1/2 -translate-x-1/2 z-50 transition-all duration-500 ease-in-out
-        top-4 md:top-auto md:bottom-6
+        bottom-10 md:bottom-6
         ${navVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'}
-        ${navVisible ? 'translate-y-0' : '-translate-y-12 md:translate-y-12'}
+        ${navVisible ? 'translate-y-0' : 'translate-y-12'}
       `}>
         <div
-          className={`flex items-center gap-0.5 md:gap-1 px-1.5 md:px-2 py-1.5 md:py-2 rounded-full border transition-all duration-300
+          className={`flex items-center gap-0 md:gap-1 px-1 md:px-2 py-2 md:py-2 rounded-full border transition-all duration-300
             ${!isMobile ? 'backdrop-blur-xl' : ''}
             ${!isMobile && darkMode ? 'bg-gray-900/80 border-purple-500/30 shadow-[0_0_40px_rgba(139,92,246,0.2)]' : ''}
             ${!isMobile && !darkMode ? 'bg-white/90 border-purple-300/50 shadow-[0_4px_40px_rgba(139,92,246,0.15)]' : ''}
           `}
           style={isMobile ? {
             background: darkMode
-              ? 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)'
-              : 'linear-gradient(135deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.5) 100%)',
-            backdropFilter: 'blur(24px) saturate(200%)',
-            WebkitBackdropFilter: 'blur(24px) saturate(200%)',
+              ? 'rgba(0,0,0,0.8)'
+              : 'rgba(255,255,255,0.85)',
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
             boxShadow: darkMode
-              ? '0 8px 32px rgba(0,0,0,0.5), inset 0 2px 2px rgba(255,255,255,0.25), inset 0 -1px 2px rgba(255,255,255,0.1)'
-              : '0 8px 32px rgba(0,0,0,0.15), inset 0 2px 2px rgba(255,255,255,0.9), inset 0 -1px 2px rgba(255,255,255,0.5)',
-            borderColor: darkMode ? 'rgba(255,255,255,0.25)' : 'rgba(255,255,255,0.7)',
+              ? '0 8px 32px rgba(139,92,246,0.2)'
+              : '0 8px 32px rgba(139,92,246,0.15)',
+            borderColor: darkMode ? 'rgba(139,92,246,0.3)' : 'rgba(139,92,246,0.25)',
           } : {}}>
           <a
             href="#education"
-            className={`px-3 md:px-5 py-1.5 md:py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 hover:scale-105 ${
+            className={`px-3 md:px-5 py-2 md:py-2.5 rounded-full text-base md:text-sm font-semibold transition-all duration-300 hover:scale-110 ${
               darkMode
                 ? 'text-gray-300 hover:text-white hover:bg-purple-500/20'
                 : 'text-gray-700 hover:text-purple-700 hover:bg-purple-100'
             }`}
           >
-            Education
+            <span className="md:hidden">🎓</span>
+            <span className="hidden md:inline">Education</span>
           </a>
           <a
             href="#skills"
-            className={`px-3 md:px-5 py-1.5 md:py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 hover:scale-105 ${
+            className={`px-3 md:px-5 py-2 md:py-2.5 rounded-full text-base md:text-sm font-semibold transition-all duration-300 hover:scale-110 ${
               darkMode
                 ? 'text-gray-300 hover:text-white hover:bg-blue-500/20'
                 : 'text-gray-700 hover:text-blue-700 hover:bg-blue-100'
             }`}
           >
-            Skills
+            <span className="md:hidden">⚡</span>
+            <span className="hidden md:inline">Skills</span>
           </a>
           <a
             href="#projects"
-            className={`px-3 md:px-5 py-1.5 md:py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 hover:scale-105 ${
+            className={`px-3 md:px-5 py-2 md:py-2.5 rounded-full text-base md:text-sm font-semibold transition-all duration-300 hover:scale-110 ${
               darkMode
                 ? 'text-gray-300 hover:text-white hover:bg-purple-500/20'
                 : 'text-gray-700 hover:text-purple-700 hover:bg-purple-100'
             }`}
           >
-            Projects
+            <span className="md:hidden">🔧</span>
+            <span className="hidden md:inline">Projects</span>
           </a>
           <a
             href="#experience"
-            className={`px-3 md:px-5 py-1.5 md:py-2.5 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 hover:scale-105 ${
+            className={`px-3 md:px-5 py-2 md:py-2.5 rounded-full text-base md:text-sm font-semibold transition-all duration-300 hover:scale-110 ${
               darkMode
                 ? 'text-gray-300 hover:text-white hover:bg-blue-500/20'
                 : 'text-gray-700 hover:text-blue-700 hover:bg-blue-100'
             }`}
           >
-            Experience
+            <span className="md:hidden">💼</span>
+            <span className="hidden md:inline">Experience</span>
           </a>
+          {/* Theme Toggle inside navbar on mobile */}
+          <button
+            onClick={() => {
+              setIsTransitioning(true);
+              setTimeout(() => {
+                setDarkMode(!darkMode);
+              }, 800);
+              setTimeout(() => {
+                setIsTransitioning(false);
+              }, 2000);
+            }}
+            className={`md:hidden px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105 ${
+              darkMode
+                ? 'text-yellow-400 hover:bg-yellow-500/20'
+                : 'text-amber-500 hover:bg-amber-100'
+            }`}
+            aria-label="Toggle dark mode"
+          >
+            {darkMode ? (
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+              </svg>
+            ) : (
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
+              </svg>
+            )}
+          </button>
         </div>
       </nav>
 
-      {/* Theme Transition with Lightning Effect */}
+      {/* Theme Transition with Lightning Effect - Desktop only */}
       <div
-        className={`fixed inset-0 z-40 pointer-events-none ${
+        className={`hidden md:block fixed inset-0 z-[100] pointer-events-none ${
           isTransitioning ? 'opacity-100' : 'opacity-0'
         }`}
       >
@@ -278,7 +309,7 @@ export default function Home() {
             isTransitioning ? 'animate-[flash_1.2s_ease-out]' : 'opacity-0'
           }`}
           style={{
-            background: 'radial-gradient(circle at 85% 85%, rgba(59, 130, 246, 0.8) 0%, rgba(147, 51, 234, 0.4) 30%, transparent 70%)',
+            background: 'radial-gradient(circle at 90% 70%, rgba(59, 130, 246, 0.8) 0%, rgba(147, 51, 234, 0.4) 30%, transparent 70%)',
           }}
         />
 
@@ -293,7 +324,7 @@ export default function Home() {
           {/* Main lightning bolt */}
           <path
             className={`${isTransitioning ? 'animate-[lightning_1s_ease-out]' : ''}`}
-            d="M85,95 L75,70 L82,70 L70,45 L78,45 L60,10 L65,40 L57,40 L68,65 L60,65 L85,95"
+            d="M90,75 L80,55 L87,55 L75,35 L83,35 L65,5 L70,30 L62,30 L73,50 L65,50 L90,75"
             fill="none"
             stroke="url(#lightning-gradient)"
             strokeWidth="0.8"
@@ -309,7 +340,7 @@ export default function Home() {
           {/* Secondary bolt */}
           <path
             className={`${isTransitioning ? 'animate-[lightning_0.8s_ease-out_0.2s]' : ''}`}
-            d="M75,90 L68,72 L73,72 L65,55 L70,55 L58,30"
+            d="M80,70 L73,55 L78,55 L70,40 L75,40 L63,20"
             fill="none"
             stroke="url(#lightning-gradient)"
             strokeWidth="0.5"
@@ -334,7 +365,7 @@ export default function Home() {
 
         {/* Electric sparks */}
         <div
-          className={`absolute bottom-12 right-12 transition-all duration-300 ${
+          className={`absolute bottom-24 right-8 transition-all duration-300 ${
             isTransitioning ? 'opacity-100 scale-100' : 'opacity-0 scale-0'
           }`}
         >
@@ -353,7 +384,7 @@ export default function Home() {
 
         {/* Wave expansion */}
         <div
-          className={`absolute bottom-8 right-8 rounded-full transition-all ease-out ${
+          className={`absolute bottom-20 right-4 md:bottom-24 md:right-8 rounded-full transition-all ease-out ${
             isTransitioning ? 'scale-[60] duration-[1800ms]' : 'scale-0 duration-0'
           } ${darkMode ? 'bg-black' : 'bg-white'}`}
           style={{ width: '56px', height: '56px' }}
@@ -384,7 +415,7 @@ export default function Home() {
         }
       `}</style>
 
-      {/* Minimal Theme Toggle */}
+      {/* Minimal Theme Toggle - Desktop only */}
       <button
         onClick={() => {
           setIsTransitioning(true);
@@ -395,7 +426,7 @@ export default function Home() {
             setIsTransitioning(false);
           }, 2000);
         }}
-        className={`fixed bottom-8 right-8 z-50 p-4 rounded-full transition-all duration-500 hover:scale-110 active:scale-95
+        className={`hidden md:block fixed bottom-24 right-8 z-50 p-4 rounded-full transition-all duration-500 hover:scale-110 active:scale-95
           ${darkMode
             ? 'bg-gray-900/80 hover:bg-gray-800'
             : 'bg-white/80 hover:bg-gray-100 shadow-lg'

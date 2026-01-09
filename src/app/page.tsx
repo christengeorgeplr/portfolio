@@ -206,21 +206,21 @@ export default function Home() {
         ${navVisible ? 'translate-y-0' : 'translate-y-12'}
       `}>
         <div
-          className={`flex items-center gap-0 md:gap-1 px-1 md:px-2 py-2 md:py-2 rounded-full border transition-all duration-300
+          className={`flex items-center gap-1 md:gap-1 px-3 md:px-2 py-2 md:py-2 rounded-full border transition-all duration-300
             ${!isMobile ? 'backdrop-blur-xl' : ''}
             ${!isMobile && darkMode ? 'bg-gray-900/80 border-purple-500/30 shadow-[0_0_40px_rgba(139,92,246,0.2)]' : ''}
             ${!isMobile && !darkMode ? 'bg-white/90 border-purple-300/50 shadow-[0_4px_40px_rgba(139,92,246,0.15)]' : ''}
           `}
           style={isMobile ? {
             background: darkMode
-              ? 'rgba(0,0,0,0.8)'
-              : 'rgba(255,255,255,0.85)',
-            backdropFilter: 'blur(20px)',
-            WebkitBackdropFilter: 'blur(20px)',
+              ? 'rgba(255,255,255,0.1)'
+              : 'rgba(255,255,255,0.4)',
+            backdropFilter: 'blur(24px) saturate(180%)',
+            WebkitBackdropFilter: 'blur(24px) saturate(180%)',
             boxShadow: darkMode
-              ? '0 8px 32px rgba(139,92,246,0.2)'
-              : '0 8px 32px rgba(139,92,246,0.15)',
-            borderColor: darkMode ? 'rgba(139,92,246,0.3)' : 'rgba(139,92,246,0.25)',
+              ? '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.2)'
+              : '0 8px 32px rgba(0,0,0,0.1), inset 0 1px 1px rgba(255,255,255,0.8)',
+            borderColor: darkMode ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.6)',
           } : {}}>
           <a
             href="#education"
@@ -277,10 +277,8 @@ export default function Home() {
                 setIsTransitioning(false);
               }, 2000);
             }}
-            className={`md:hidden px-3 py-1.5 rounded-full transition-all duration-300 hover:scale-105 ${
-              darkMode
-                ? 'text-yellow-400 hover:bg-yellow-500/20'
-                : 'text-amber-500 hover:bg-amber-100'
+            className={`md:hidden px-3 py-1.5 rounded-full transition-transform duration-300 active:scale-95 ${
+              darkMode ? 'text-yellow-400' : 'text-amber-500'
             }`}
             aria-label="Toggle dark mode"
           >

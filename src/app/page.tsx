@@ -213,14 +213,12 @@ export default function Home() {
           `}
           style={isMobile ? {
             background: darkMode
-              ? 'rgba(255,255,255,0.1)'
-              : 'rgba(255,255,255,0.4)',
-            backdropFilter: 'blur(24px) saturate(180%)',
-            WebkitBackdropFilter: 'blur(24px) saturate(180%)',
-            boxShadow: darkMode
-              ? '0 8px 32px rgba(0,0,0,0.3), inset 0 1px 1px rgba(255,255,255,0.2)'
-              : '0 8px 32px rgba(0,0,0,0.1), inset 0 1px 1px rgba(255,255,255,0.8)',
-            borderColor: darkMode ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.6)',
+              ? 'rgba(0,0,0,0.3)'
+              : 'rgba(255,255,255,0.3)',
+            backdropFilter: 'blur(2px)',
+            WebkitBackdropFilter: 'blur(2px)',
+            boxShadow: 'none',
+            borderColor: darkMode ? 'rgba(255,255,255,0.15)' : 'rgba(0,0,0,0.1)',
           } : {}}>
           <a
             href="#education"
